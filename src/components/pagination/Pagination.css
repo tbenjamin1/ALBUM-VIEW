@@ -1,0 +1,22 @@
+.pageContainer {
+  float: right;
+  margin-bottom: 5rem;
+}
+.page-Bttn {
+  border-radius: 5px;
+  height: 40px;
+  color: black;
+
+  justify-content: center;
+  margin: 1rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.page-Bttn:hover {
+  color: #fff;
+  background-color: #0c0d0e;
+}
