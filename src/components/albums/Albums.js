@@ -19,7 +19,7 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
 
   const mapData = Data.slice(indexOfFirstPic,indexOfLastPic).map((picture) => {
     return (
-      <Card key={picture.id} url={picture.thumbNailUrl} title={picture.title} />
+      <Card key={picture.id} url={picture.thumbnailUrl} title={picture.title} />
 
       
       );
@@ -30,14 +30,11 @@ const paginate = pageNumber => setCurrentPage(pageNumber);
    
     const getAlbum = async () => {
       const res = await axios.get(
-        `https://jsonplaceholder.typicode.com/albums/${props.searchId}/photos`
+       
+        `https://challenge3backend.herokuapp.com/api/v1/album/${props.searchId}`
       );
-      const updatedData = res.data.map((obj) => ({
-        id: obj.id,
-        title: obj.title,
-        thumbNailUrl: obj.thumbnailUrl,
-      }));
-      setData(updatedData);
+      
+      setData(res.data.data);
     };
 
     getAlbum();
